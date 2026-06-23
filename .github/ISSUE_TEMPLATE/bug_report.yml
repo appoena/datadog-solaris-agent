@@ -1,0 +1,29 @@
+name: Bug Report
+description: Report a problem with the agent
+title: "[BUG] "
+labels: ["bug"]
+
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the issue
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Agent version
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Debug Logs
+      description: Relevant logs if available

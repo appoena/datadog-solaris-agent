@@ -1,0 +1,141 @@
+
+# Configure agent logging
+log:
+  # The log level used by the agent.
+  # Available levels: debug/info/warn/error/fatal
+  level: info
+
+  # Indicates if the agent should log the payloads of the requests it sends to Datadog.
+  # Only available if log_level is debug.
+  # THIS OPTION WILL CAUSE HIGH NUMBER OF LOGS, USE WITH CAUTION IN PRODUCTION ENVIRONMENTS.
+  #log_payloads: false
+
+
+
+# CREDENTIALS (Fill these in before running)
+api_key: ""
+app_key: ""
+site: "datadoghq.com"
+
+# Override the hostname reported by the agent.
+#hostname_override: ""
+
+# Add a prefix to all metrics reported by the agent.
+#metric_prefix: ""
+
+# -------------------------------------------------------------------------
+# SSL Configuration.
+# This disables SSL verification for the agent.
+# Use with caution in production environments.
+# -------------------------------------------------------------------------
+disable_ssl_verification: false
+
+# -------------------------------------------------------------------------
+# Global tags to add to every metric submitted.
+#tags:
+#  - env:test
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+# PROCESS COLLECTION
+# -------------------------------------------------------------------------
+process:
+  # Enables process collection (disabled by default)
+  enabled: false
+
+  # Enables the Live Process Collector
+  live_process_enabled: false
+
+  # Enables submission of solaris.process.* metrics
+  enable_solaris_process_metrics: false
+
+  # Tagging options (Keep disabled by default to save costs/cardinality)
+  tag_process_metrics_with_process_name: false
+  tag_process_metrics_with_process_pid: false
+
+  # List of specific processes to monitor. Leave empty [] to monitor everything.
+  # If left empty, all network devices will be monitored.
+  # THIS OPTION WILL CAUSE HIGH METRIC CARDINALITY. USE WITH CAUTION IN PRODUCTION ENVIRONMENTS.
+  processes_to_monitor: [ ]
+
+  # The minimum interval (in seconds) between two collection cycles.
+  # Default value: 20
+  #min_collection_interval: 20
+
+  # The minimum interval (in seconds) between two live process collection cycles.
+  # Default value: 5
+  #live_process_min_collection_interval: 5
+
+# -------------------------------------------------------------------------
+# NETWORK COLLECTION
+# -------------------------------------------------------------------------
+network:
+
+  # Enables network collection
+  enabled: false
+
+  # A list of network devices to collect metrics from.
+  # If left empty, all network devices will be monitored.
+  # THIS OPTION WILL CAUSE HIGH METRIC CARDINALITY. USE WITH CAUTION IN PRODUCTION ENVIRONMENTS.
+  devices: [ ]
+
+  # The minimum interval (in seconds) between two collection cycles.
+  # Default value: 20
+  #min_collection_interval: 20
+
+
+# -------------------------------------------------------------------------
+# MEMORY COLLECTION
+# -------------------------------------------------------------------------
+memory:
+
+  # Enables memory collection (enabled by default)
+  enabled: true
+
+  # Enables swap memory collection
+  swap_enabled: true
+
+  # The minimum interval (in seconds) between two collection cycles.
+  # Default value: 20
+  #min_collection_interval: 20
+
+# -------------------------------------------------------------------------
+# FILESYSTEM COLLECTION
+# -------------------------------------------------------------------------
+filesystem:
+  # Enables filesystem collection
+  enabled: false
+
+  # A list of specific devices or mount points to collect metrics from.
+  # If left empty, all devices and mount points will be monitored.
+  # THIS OPTION WILL CAUSE HIGH METRIC CARDINALITY. USE WITH CAUTION IN PRODUCTION ENVIRONMENTS.
+  devices: [ ]
+
+  # A list of specific mount points to collect metrics from.
+  # If left empty, all mount points will be monitored.
+  # THIS OPTION WILL CAUSE HIGH METRIC CARDINALITY. USE WITH CAUTION IN PRODUCTION ENVIRONMENTS.
+  mountPoints: [ ]
+  # The minimum interval (in seconds) between two collection cycles.
+  # Default value: 20
+  #min_collection_interval: 20
+
+
+# -------------------------------------------------------------------------
+# CPU COLLECTION
+# -------------------------------------------------------------------------
+cpu:
+  # Enables CPU collection (enabled by default)
+  enabled: true
+  # The minimum interval (in seconds) between two collection cycles.
+  # Default value: 20
+  #min_collection_interval: 20
+
+# -------------------------------------------------------------------------
+# UPTIME COLLECTION
+# -------------------------------------------------------------------------
+uptime:
+  # Enables CPU collection (enabled by default)
+  enabled: true
+  # The minimum interval (in seconds) between two collection cycles.
+  # Default value: 20
+  #min_collection_interval: 20

@@ -1,0 +1,32 @@
+name: Support Request
+description: Ask for help using the agent
+title: "[SUPPORT] "
+labels: ["support"]
+
+body:
+  - type: textarea
+    attributes:
+      label: Question
+      description: Describe the issue or question
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Agent Version
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Environment
+      description: OS, infrastructure, and deployment details
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Debug Logs
+      description: Relevant logs if available
+    validations:
+      required: false

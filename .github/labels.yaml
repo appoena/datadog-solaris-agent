@@ -1,0 +1,31 @@
+- name: bug
+  color: "d73a4a"
+  description: Software malfunction or defect
+
+- name: support
+  color: "1d76db"
+  description: User support request
+
+- name: security
+  color: "b60205"
+  description: Security vulnerability report
+
+- name: enhancement
+  color: "a2eeef"
+  description: Feature request or improvement
+
+- name: documentation
+  color: "0075ca"
+  description: Documentation issue
+
+- name: installation
+  color: "5319e7"
+  description: Installation or deployment issue
+
+- name: compatibility
+  color: "fbca04"
+  description: Platform compatibility issue
+
+- name: question
+  color: "d876e3"
+  description: General question

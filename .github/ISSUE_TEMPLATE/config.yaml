@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Support Guide
+    url: https://github.com/appoena/dataodog-solaris-agent/SUPPORT.md
+    about: Please read the support guide before opening an issue.
+
+  - name: Documentation
+    url: https://github.com/appoena/dataodog-solaris-agent/docs
+    about: Please read the documentation before opening an issue.
+
+  - name: Compatibility Guide
+    url: https://github.com/appoena/dataodog-solaris-agent/docs/Compatibility.md
+    about: Check supported systems before reporting compatibility issues.
